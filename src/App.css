@@ -6,7 +6,8 @@
 }
 
 .App-header {
-  background-color: #262626;
+  font-size: 1.5rem;
+  background-color: #34043dc2;
   overflow: visible;
   width: 100%;
   text-align: center;
@@ -14,6 +15,7 @@
 }
 
 .Messages-list {
+  
   padding: 20px 0;
   max-width: 900px;
   width: 100%;
@@ -69,7 +71,7 @@
 }
 
 .currentMember > .Message-content .text {
-  background-color: orangered;
+  background-color: #34043dc2;
 }
 
 form {
@@ -84,14 +86,14 @@ input {
   padding: 5px;
   font-size: 16px;
   border-radius: 8px;
-  border: 1px solid orangered;
+  border: 1px solid #34043dc2;
   flex-grow: 1;
 }
 
 button {
   padding: 5px 10px;
   font-size: 16px;
-  background-color: orangered;
+  background-color: #34043dc2;
   color: white;
   border: none;
   border-radius: 8px;
