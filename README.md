@@ -68,3 +68,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### TODO read
+
+## Scaledrone readme list
+https://www.scaledrone.com/blog/javascript-chat-room-tutorial/
+
+## React ReadMe list
+https://react.dev/reference/react/StrictMode
+
+## JS ReadMe list
+https://stackoverflow.com/questions/62220832/react-hooks-state-is-undefined-when-updating

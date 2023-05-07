@@ -17,7 +17,6 @@ class Input extends Component {
   }
 
   render() {
-    debugger;
     const { label } = this.props;
     const { testPropNekiDrugi } = this.props;
     const { testPropNekiTreci } = this.props;

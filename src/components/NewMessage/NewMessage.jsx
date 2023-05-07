@@ -14,7 +14,7 @@ const NewMessage = (props) => {
   };
 
   return (
-    <div>
+    <div className="new-message-container">
       <input
         onChange={(e) => onChange(e)}
         value={text}

@@ -68,8 +68,8 @@ function App() {
       data: {
         name: username,
         color: color,
-      }
-  });
+      },
+    });
 
     drone.on("open", (error) => {
       if (error) {
@@ -82,16 +82,27 @@ function App() {
     const room = drone.subscribe(roomName);
 
     room.on("message", (message) => {
+      console.debug(message + " is added");
       const { data, id, timestamp, clientId, member } = message;
-      debugger;
       // const messages = this.state.messages; // 3
       // messages.push({ member, text: data }); // dodaj 4-u
       // this.setState({ messages }); //spremni sve 4 u state
 
-      setMessages([...messages, { member, text: data }]); // [...3-postojece-poruke, 4-ta]
+      setMessages(oldMessages => {
+        if (!messages) {
+          console.error('messages je prazan')
+        }
+        return [...oldMessages, { member, text: data }];
+      });
     });
 
     setDrone(drone);
+
+    return () => {
+      // close the connection to when app unloads
+      room.unsubscribe();
+      drone.close();
+    }
   }, []);
 
   const sendMessageToChat = (message) => {
@@ -106,6 +117,7 @@ function App() {
       <div className="App-header">
         <h1>My Chat App</h1>
       </div>
+      {messages.length}
       <Messages
         messages={messages}
         currentMember={{
